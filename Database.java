@@ -21,20 +21,22 @@ public class Database{
         this.llibPassword = llibPassword;
     }
 
-    public void connectar(){
-
+    public void connectar() throws SQLException{
+        if (connexio == null || connexio.isClosed()){
+            connexio = DriverManager.getConnexio(llibURL, llibUsername, llibPassword);
+        }
     }
-
-    public void desconnectar(){
-
+    //Aqui el que hi fem es que hi hagi una connxeio valida a la base de dades abans que fer cosas raras, el SQLException suert quan hi ha un problema amb la connexio.
+    public void desconnectar() throws SQLException{
+        if (connexio != null && !connexio.isClosed()){
+            connexio.close();
+        }
     }
-
+    //Aqui el que fem es que hi volem crear un metode de desconexió amb la base de dades
     public void addLlibre(){
 
     }
 
-    public void getLlibre(){
-
-    }
-
 }
+//Aqui ja hem fet totes les clases que necesitem per a la database.
+
