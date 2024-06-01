@@ -5,7 +5,7 @@ package examen;
 public class Llibres{
     int id;
     String nom;
-    String autor;
+    String autor; 
     String genere;
 //posem les variables
     public Llibres(int id, String nom, String autor, String genere){
