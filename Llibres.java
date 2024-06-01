@@ -6,7 +6,7 @@ public class Llibres{
     int id;
     String nom;
     String autor;
-    int quantiat;
+    String genere;
 
     public Llibres(){
 
@@ -14,7 +14,7 @@ public class Llibres{
     public void setId(){
 
     }
-    public String getIsbc() {
+    public String getId() {
     
     }
 
@@ -34,11 +34,11 @@ public class Llibres{
 
     }
 
-    public void setQuantiat(){
+    public void setGenere(){
 
     }
 
-    public int getQuantiat() {
+    public int getGenere() {
 
     }
 }
