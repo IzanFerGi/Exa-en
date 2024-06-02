@@ -1,4 +1,4 @@
-package examen;
+package com.example.database;
 
 import com.example.database.models.Book;
 import java.sql.SQLException;
