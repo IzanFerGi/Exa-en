@@ -96,7 +96,21 @@ public class Database{
     una llista, y per ultim retornala llista completa dels llibres. 
     '''
 
-    
+    public void updateLlibres(llibres llibres) throws SQLException {
+        String query = "UPDATE llibres SET nom = ?, autor = ?, genere = ? WHERE id = ?";
+        try (PreparedStatement statement = connexio.prepareStatement(query)) {
+            statement.setString(1, llibres.getNom());
+            statement.setString(2, llibres.getAutor());
+            statement.setString(3, llibres.getGenere());
+            statement.setInt(4, llibres.getId());
+            statement.executeUpdate();
+        }
+    }
+    '''
+    Aqui el que hi estem fent es executar una consulta per actualitzar tots els registres 
+    de la taula llibres a on amb el id coincideix amb el objecte llibre.
+    '''
 }
+
 //Aqui ja hem fet totes les clases que necesitem per a la database.
 
