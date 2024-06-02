@@ -110,6 +110,18 @@ public class Database{
     Aqui el que hi estem fent es executar una consulta per actualitzar tots els registres 
     de la taula llibres a on amb el id coincideix amb el objecte llibre.
     '''
+
+    public void deleteLlibres(int id) throws SQLException {
+        String query = "DELETE FROM llibres WHERE id = ?";
+        try (PreparedStatement statement = connexio.prepareStatement(query)) {
+            statement.setInt(1, id);
+            statement.executeUpdate();
+        }
+    }
+    '''
+    Aqui el que hi hem fet ha sigut executar una consulta per borrar els llibres quan hi 
+    troba el id, i una vegada fet alló el que hi fá es actualitzar.
+    '''
 }
 
 //Aqui ja hem fet totes les clases que necesitem per a la database.
