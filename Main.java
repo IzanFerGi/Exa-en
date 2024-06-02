@@ -32,6 +32,8 @@ public class Main{
 
             dbIzan.desconnectar();
             //Per desconnectar de la base de dades.
+
+            //dawdadsad
         }
     }
 }
