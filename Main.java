@@ -13,6 +13,7 @@ public class Main{
         try{
             Database bdIzan = new Database(jdbcURL, jdbcUsername, jdbcPassword);
             bdIzan.connectar()
+            //Per connectarse a la base de dades.
 
             Llibres newllibre = new Llibres(23, "Soyese Y el correcaminos", "Izan ferrero rocher", "Masculino binario");
             bdIzan.addLlibre(newllibre);
@@ -28,6 +29,9 @@ public class Main{
 
             dbIzan.deleteLlibres(1);
             //Per eliminar un llibre
+
+            dbIzan.desconnectar();
+            //Per desconnectar de la base de dades.
         }
     }
 }
