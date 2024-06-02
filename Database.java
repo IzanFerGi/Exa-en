@@ -68,11 +68,10 @@ public class Database{
         }
         return null;
     }
-    '''
-    Aqui el que hi hem fet ha sigut executar una consulta per selecciona un llibre 
-    de la taula llibres, si troba un llibre amb el id torna un objecte llibre amb les 
-    dades del llibre, si no hi troba res el que retorna es null.
-    '''
+    
+    //Aqui el que hi hem fet ha sigut executar una consulta per selecciona un llibre 
+    //de la taula llibres, si troba un llibre amb el id torna un objecte llibre amb les 
+    //dades del llibre, si no hi troba res el que retorna es null.
 
     public List<Llibre> getAllLlibres() throws SQLException {
         List<Llibre> llibress = new ArrayList<>();
@@ -89,12 +88,12 @@ public class Database{
         }
         return llibres;
     }
-    '''
-    Aqui el que hi em fet ha sigut executar una consulta on el que hi fem es que
-    ensenyi tots els registres del llibres que hi han, y que per cada registre trobat
-    el que hi farem será crear un objecte amb amb les seves dades, fica tots els objectes a 
-    una llista, y per ultim retornala llista completa dels llibres. 
-    '''
+  
+    //Aqui el que hi em fet ha sigut executar una consulta on el que hi fem es que
+    //ensenyi tots els registres del llibres que hi han, y que per cada registre trobat
+    //el que hi farem será crear un objecte amb amb les seves dades, fica tots els objectes a 
+    //una llista, y per ultim retornala llista completa dels llibres. 
+
 
     public void updateLlibres(llibres llibres) throws SQLException {
         String query = "UPDATE llibres SET nom = ?, autor = ?, genere = ? WHERE id = ?";
@@ -106,10 +105,10 @@ public class Database{
             statement.executeUpdate();
         }
     }
-    '''
-    Aqui el que hi estem fent es executar una consulta per actualitzar tots els registres 
-    de la taula llibres a on amb el id coincideix amb el objecte llibre.
-    '''
+   
+    //Aqui el que hi estem fent es executar una consulta per actualitzar tots els registres 
+    //de la taula llibres a on amb el id coincideix amb el objecte llibre.
+   
 
     public void deleteLlibres(int id) throws SQLException {
         String query = "DELETE FROM llibres WHERE id = ?";
@@ -118,10 +117,10 @@ public class Database{
             statement.executeUpdate();
         }
     }
-    '''
-    Aqui el que hi hem fet ha sigut executar una consulta per borrar els llibres quan hi 
-    troba el id, i una vegada fet alló el que hi fá es actualitzar.
-    '''
+
+    //Aqui el que hi hem fet ha sigut executar una consulta per borrar els llibres quan hi 
+    //troba el id, i una vegada fet alló el que hi fá es actualitzar.
+
 }
 
 //Aqui ja hem fet totes les clases que necesitem per a la database.
