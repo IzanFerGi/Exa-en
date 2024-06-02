@@ -10,20 +10,20 @@ import java.util.List;
 
 public class Database{
 
-    private String llibURL;
-    private String llibUsername;
-    private String llibPassword;
+    private String jdbcURL;
+    private String jdbcUsername;
+    private String jdbcPassword;
     private Connection connexio;
 
-    public Database(String llibURL,String llibUsername, String llibPassword ){
-        this.llibURL = llibURL;
-        this.llibUsername = llibUsername;
-        this.llibPassword = llibPassword;
+    public Database(String jdbcURL,String jdbcUsername, String jdbcPassword ){
+        this.jdbcURL = jdbcURL;
+        this.jdbcUsername = jdbcUsername;
+        this.jdbcPassword = jdbcPassword;
     }
 
     public void connectar() throws SQLException{
         if (connexio == null || connexio.isClosed()){
-            connexio = DriverManager.getConnexio(llibURL, llibUsername, llibPassword);
+            connexio = DriverManager.getConnexio(jdbcURL, jdbcUsername, jdbcPassword);
         }
     }
     //Aqui el que hi fem es que hi hagi una connxeio valida a la base de dades abans que fer cosas raras, el SQLException suert quan hi ha un problema amb la connexio.
