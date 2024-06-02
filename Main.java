@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class Main{
     public static void main(String[] args) {
-        String jdbcURL = "";
-        String jdbcUsername = "";
-        String jdbcPassword = "";
+        String jdbcURL = "jdbc:mysql://172.17.0.2:33060/libros";
+        String jdbcUsername = "root";
+        String jdbcPassword = "estudiar";
 
         try{
             Database bdIzan = new Database(jdbcURL, jdbcUsername, jdbcPassword);
@@ -32,8 +32,6 @@ public class Main{
 
             dbIzan.desconnectar();
             //Per desconnectar de la base de dades.
-
-            //dawdadsad
         }
     }
 }
