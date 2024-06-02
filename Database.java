@@ -51,8 +51,11 @@ public class Database{
         //Aqui el que hi fem es que si s'ha generat un nou ID es ficara en el objecte llibres
         }
     }
-    //Aquí el que hem fer una clase per insertar nous llibres de les bases de dades.
 
+    //Aquí el que hem fer una clase per insertar nous llibres de les bases de dades.
+    public Llibres getLlibre(int id) throws SQLException{
+        
+    }
 }
 //Aqui ja hem fet totes les clases que necesitem per a la database.
 
