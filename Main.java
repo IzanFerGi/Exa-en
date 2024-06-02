@@ -17,5 +17,10 @@ public class Main{
             Llibres newllibre = new Llibres(23, "Soyese Y el correcaminos", "Izan ferrero rocher", "Masculino binario");
             bdIzan.addLlibre(newllibre);
             //Creem els llibres
+
+            Llibres showLlibre = bdIzan.getLlibre(1);
+            System.out.println(showLlibre);
+            //Per veure els llibres
         }
+    }
 }
