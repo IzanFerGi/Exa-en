@@ -54,12 +54,12 @@ public class Database{
 
     //Aquí el que hem fer una clase per insertar nous llibres de les bases de dades.
     public Llibres getLlibre(int id) throws SQLException{
-        String query = "SELECT * FROM books WHERE id = ?";
+        String query = "SELECT * FROM llibres WHERE id = ?";
         try (PreparedStatement statement = connexio.prepareStatement(query)) {
             statement.setInt(1, id);
             try (ResultSet resultSet = statement.executeQuery()){
                 if (resultSet.next()) {
-                    String nom = resultSet.getString("tnom");
+                    String nom = resultSet.getString("nom");
                     String autor = resultSet.getString("autor");
                     String genere = resultSet.getString("genere");
                     return new Llibres(id, nom, autor, genere); 
@@ -68,6 +68,11 @@ public class Database{
         }
         return null;
     }
+    '''
+    Aqui el que hi hem fet ha sigut executar una consulta per selecciona un llibre 
+    de la taula llibres, si troba un llibre amb el id torna un objecte llibre amb les 
+    dades del llibre, si no hi troba res el que retorna es null.
+    '''
 }
 //Aqui ja hem fet totes les clases que necesitem per a la database.
 
