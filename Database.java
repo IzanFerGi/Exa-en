@@ -73,6 +73,30 @@ public class Database{
     de la taula llibres, si troba un llibre amb el id torna un objecte llibre amb les 
     dades del llibre, si no hi troba res el que retorna es null.
     '''
+
+    public List<Llibre> getAllLlibres() throws SQLException {
+        List<Llibre> llibress = new ArrayList<>();
+        String query = "SELECT * FROM llibres";
+        try (Statement statement = connexio.createStatement();
+             ResultSet resultSet = statement.executeQuery(query)) {
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String nom = resultSet.getString("nom");
+                String autor = resultSet.getString("autor");
+                String genere = resultSet.getString("genere");
+                llibres.add(new Llibres(id, nom, autor, genere));
+            }
+        }
+        return llibres;
+    }
+    '''
+    Aqui el que hi em fet ha sigut executar una consulta on el que hi fem es que
+    ensenyi tots els registres del llibres que hi han, y que per cada registre trobat
+    el que hi farem será crear un objecte amb amb les seves dades, fica tots els objectes a 
+    una llista, y per ultim retornala llista completa dels llibres. 
+    '''
+
+    
 }
 //Aqui ja hem fet totes les clases que necesitem per a la database.
 
