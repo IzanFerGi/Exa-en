@@ -1,6 +1,6 @@
-package com.example.database;
+package examen;
 
-import com.example.database.models.Book;
+import lib.Llibres;
 import java.sql.SQLException;
 
 

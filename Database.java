@@ -1,6 +1,5 @@
-package com.example.database;
-
-import com.example.database.models.Book;
+package examen;
+import lib.Llibres;
 
 import java.sql.*;
 import java.util.ArrayList;

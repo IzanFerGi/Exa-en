@@ -1,6 +1,6 @@
 //Comenzamos haciendo los libros, que será la parte mas senzilla en si.
 
-package com.example.database.models;
+package examen;
 
 public class Llibres{
     int id;
