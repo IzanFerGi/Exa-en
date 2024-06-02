@@ -21,6 +21,13 @@ public class Main{
             Llibres showLlibre = bdIzan.getLlibre(1);
             System.out.println(showLlibre);
             //Per veure els llibres
+
+            showLlibre.setGenere("Yanosoyese");
+            bdIzan.updateLlibres(showLlibre);
+            //Per actualizar els llibres
+
+            dbIzan.deleteLlibres(1);
+            //Per eliminar un llibre
         }
     }
 }
