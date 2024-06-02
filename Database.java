@@ -59,9 +59,14 @@ public class Database{
             statement.setInt(1, id);
             try (ResultSet resultSet = statement.executeQuery()){
                 if (resultSet.next()) {
-                    
+                    String nom = resultSet.getString("tnom");
+                    String autor = resultSet.getString("autor");
+                    String genere = resultSet.getString("genere");
+                    return new Llibres(id, nom, autor, genere); 
                 }
             }
+        }
+        return null;
     }
 }
 //Aqui ja hem fet totes les clases que necesitem per a la database.
