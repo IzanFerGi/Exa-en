@@ -38,9 +38,9 @@ public class Database{
         //Els ?? es per marcar les poscions dels valors
         try (PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
         //Aquí el que hi fem sería crear un try per recuperar qualsevol clau generada com el ID del llibre.
-            statement.setString(1, llibres.getTitle());
-            statement.setString(2, llibres.getAuthor());
-            statement.setString(3, llibres.getGenre());
+            statement.setString(1, llibres.getNom());
+            statement.setString(2, llibres.getAutor());
+            statement.setString(3, llibres.getGenere());
             statement.executeUpdate();
         // Aquí el que hi fem sería assignar els valors dels parametres
             try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
